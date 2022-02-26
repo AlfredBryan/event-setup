@@ -1,14 +1,13 @@
 import { Box, Checkbox, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-import { BaseInput, FooterButton, ProgressNav } from "../components";
+import { BaseInput, FooterButton } from "../components";
 import { useAddGenre } from "../hooks";
 
 const StepThree = ({ nextStep, prevStep }) => {
   const { state, setState, handleUpdateSubgenre } = useAddGenre({ nextStep });
   return (
     <>
-      <ProgressNav step={3} />
       <Flex w={"100%"} justify={"center"}>
         <Box w="56%" mt="4rem">
           <BaseInput

@@ -7,3 +7,4 @@ export * from "./AddSubgenreContext";
 export * from "./LoadingContext";
 export * from "./ModalContext";
 export * from "./FormStateContext";
+export * from "./ArrayContext";

@@ -5,7 +5,6 @@ import {
   BaseDropdown,
   BaseInput,
   FinishButton,
-  ProgressNav,
   SuccessModal,
 } from "../components";
 import { useAddBooks } from "../hooks";
@@ -16,7 +15,6 @@ const StepFour = ({ prevStep }) => {
 
   return (
     <>
-      <ProgressNav step={4} />
       <Flex w={"100%"} justify={"center"}>
         <Box mt="2rem" ml="3%" w="57%">
           <BaseInput
@@ -106,7 +104,6 @@ const StepFour = ({ prevStep }) => {
               onChange={handleChange}
             />
           </Box>
-
           <FinishButton
             isLoading={isLoading}
             onClick={fetchMethod}

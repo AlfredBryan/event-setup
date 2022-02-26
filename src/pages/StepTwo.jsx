@@ -1,15 +1,19 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
 import React from "react";
 
-import { FooterButton, ProgressNav } from "../components";
+import { FooterButton } from "../components";
 import { useSub } from "../contexts";
 
-const StepTwo = ({ subgenre, nextStep, prevStep, nextAvailableStep }) => {
+const StepTwo = ({
+  subgenre,
+  prevStep,
+  getProgressNavItems,
+  nextAvailableStep,
+}) => {
   const { subtitle, setSubtitle } = useSub();
 
   return (
     <>
-      <ProgressNav step={2} />
       <Flex w={"100%"} justify={"center"}>
         <Box w="56%">
           <Flex mt="10rem" flexWrap={"wrap"} gap={"5rem"}>
@@ -44,7 +48,7 @@ const StepTwo = ({ subgenre, nextStep, prevStep, nextAvailableStep }) => {
           </Flex>
           <FooterButton
             prevStep={prevStep}
-            nextStep={nextStep}
+            nextStep={getProgressNavItems}
             disabledNext={subtitle === ""}
           />
         </Box>

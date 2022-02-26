@@ -1,7 +1,7 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
 import React from "react";
 
-import { FooterButton, ProgressNav } from "../components";
+import { FooterButton } from "../components";
 import { useActive } from "../contexts";
 
 const StepOne = ({ genres, popSub, nextStep }) => {
@@ -9,7 +9,6 @@ const StepOne = ({ genres, popSub, nextStep }) => {
 
   return (
     <>
-      <ProgressNav step={1} />
       <Flex w={"100%"} justify={"center"}>
         <Box w="56%">
           <Flex mt="10rem" flexWrap={"wrap"} gap={"5rem"}>

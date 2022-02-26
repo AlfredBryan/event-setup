@@ -4,7 +4,7 @@ import React from "react";
 const Step = ({ active, step, name, children, ...rest }) => {
   return (
     <>
-      <Flex direction={"column"} align={"center"} w="15%">
+      <Flex m="2rem" direction={"column"} align={"center"} w="25%">
         <Flex
           align={"center"}
           justify={"center"}
@@ -17,7 +17,7 @@ const Step = ({ active, step, name, children, ...rest }) => {
         >
           {step}
         </Flex>
-        <Text fontFamily={"bold"} fontSize={"12px"}>
+        <Text textAlign={"center"} fontFamily={"bold"} fontSize={"12px"}>
           {name}
         </Text>
       </Flex>

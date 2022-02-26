@@ -8,26 +8,29 @@ import AddSubgenreProvider from "./AddSubgenreContext";
 import LoadingProvider from "./LoadingContext";
 import ModalProvider from "./ModalContext";
 import FormProvider from "./FormStateContext";
+import ArrayProvider from "./ArrayContext";
 
 const ContextProviders = ({ children }) => {
   return (
-    <FormProvider>
-      <ModalProvider>
-        <LoadingProvider>
-          <AddSubgenreProvider>
-            <SelectedProvider>
-              <SubProvider>
-                <ActiveProvider>
-                  <StepProvider>
-                    <SubGenreProvider>{children}</SubGenreProvider>
-                  </StepProvider>
-                </ActiveProvider>
-              </SubProvider>
-            </SelectedProvider>
-          </AddSubgenreProvider>
-        </LoadingProvider>
-      </ModalProvider>
-    </FormProvider>
+    <SelectedProvider>
+      <ArrayProvider>
+        <FormProvider>
+          <ModalProvider>
+            <LoadingProvider>
+              <AddSubgenreProvider>
+                <SubProvider>
+                  <ActiveProvider>
+                    <StepProvider>
+                      <SubGenreProvider>{children}</SubGenreProvider>
+                    </StepProvider>
+                  </ActiveProvider>
+                </SubProvider>
+              </AddSubgenreProvider>
+            </LoadingProvider>
+          </ModalProvider>
+        </FormProvider>
+      </ArrayProvider>
+    </SelectedProvider>
   );
 };
 

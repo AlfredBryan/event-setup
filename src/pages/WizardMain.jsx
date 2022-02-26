@@ -14,8 +14,9 @@ export const WizardMain = () => {
     nextStep,
     prevStep,
     popSub,
-    nextAvailableStep,
     step,
+    getProgressNavItems,
+    nextAvailableStep,
   } = useWizard();
 
   switch (true) {
@@ -26,10 +27,11 @@ export const WizardMain = () => {
     case step === 2:
       return (
         <StepTwo
+          nextAvailableStep={nextAvailableStep}
+          getProgressNavItems={getProgressNavItems}
           nextStep={nextStep}
           subgenre={subGenre}
           prevStep={prevStep}
-          nextAvailableStep={nextAvailableStep}
         />
       );
     case step === 3:

@@ -8,13 +8,13 @@ export const useAddBooks = () => {
 
   const fetchMethod = () => {
     setIsLoading(true);
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
-      .then((response) => {
-        setIsLoading(false);
-        setIsOpen(true);
-        response.json();
-      })
-      .then((json) => console.log(json));
+    console.log(state);
+    setTimeout(() => {
+      setIsLoading(true);
+      console.log("Data saved successfully");
+      setIsLoading(false);
+      setIsOpen(true);
+    }, 2000);
   };
 
   const handleAddAnother = () => {
