@@ -50,6 +50,11 @@ export const useWizard = () => {
   };
 
   const nextAvailableStep = () => {
+    setStep(3);
+    setProgressNavItems();
+  };
+
+  const addNew = () => {
     setSelected("add_new");
     setStep(3);
   };
@@ -67,5 +72,6 @@ export const useWizard = () => {
     step,
     setProgressNavItems,
     nextAvailableStep,
+    addNew,
   };
 };

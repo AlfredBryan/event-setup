@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
 import { Step } from "./Step";
@@ -11,6 +11,9 @@ const ProgressNav = () => {
   return (
     <Flex w={"100%"} justify={"center"}>
       <Box mt="3rem" w="60%">
+        <Text ml="3rem" fontFamily={"bold"} fontSize={"16px"}>
+          Add book - New book
+        </Text>
         <Flex align={"center"}>
           {data?.map((nav, i, arrayData) => (
             <Flex align={"center"} key={i}>

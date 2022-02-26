@@ -7,8 +7,9 @@ import { useSub } from "../contexts";
 const StepTwo = ({
   subgenre,
   prevStep,
-  getProgressNavItems,
+  setProgressNavItems,
   nextAvailableStep,
+  addNew,
 }) => {
   const { subtitle, setSubtitle } = useSub();
 
@@ -41,14 +42,14 @@ const StepTwo = ({
               bg="#fff"
               border={"1px solid grey"}
               _hover={{ bg: "grey", color: "#fff" }}
-              onClick={nextAvailableStep}
+              onClick={addNew}
             >
               Add new
             </Button>
           </Flex>
           <FooterButton
             prevStep={prevStep}
-            nextStep={getProgressNavItems}
+            nextStep={nextAvailableStep}
             disabledNext={subtitle === ""}
           />
         </Box>

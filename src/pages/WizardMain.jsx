@@ -15,8 +15,9 @@ export const WizardMain = () => {
     prevStep,
     popSub,
     step,
-    getProgressNavItems,
+    setProgressNavItems,
     nextAvailableStep,
+    addNew,
   } = useWizard();
 
   switch (true) {
@@ -28,10 +29,11 @@ export const WizardMain = () => {
       return (
         <StepTwo
           nextAvailableStep={nextAvailableStep}
-          getProgressNavItems={getProgressNavItems}
+          setProgressNavItems={setProgressNavItems}
           nextStep={nextStep}
           subgenre={subGenre}
           prevStep={prevStep}
+          addNew={addNew}
         />
       );
     case step === 3:
